@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" style="margin-bottom:100px;">
+    <div class="row">
+        {% if b %}
+        {% for i in b %}
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{i.image.url}}" height="200px" width="100%" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-center fw-bold">{{i.name}}</h5>
+                    <p class="card-title text-center fw-bold">{{i.price}}</p>
+                    <a href="{% url 'shop:views' i.name %}" class="btn btn-primary" style="position:relative;left:40%;">Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div>
+            <p>No Result Found</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

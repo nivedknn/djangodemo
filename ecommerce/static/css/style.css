@@ -1,0 +1,15 @@
+body
+{
+background-color:#f0ed99;
+}
+
+.foot
+{
+height:40px;
+width:100%;
+background-color:lightblue;
+position:fixed;
+bottom:0;
+left:0;
+text-align:center;
+}
