@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 from shop.models import Product
+from django.http import HttpResponse
 
 
 class Cart(models.Model):
